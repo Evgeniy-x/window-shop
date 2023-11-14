@@ -1,5 +1,5 @@
-import './App.scss';
+import Layout from '../Layout';
 
-export const App = () => {
-  return <div className="App">React App</div>;
-};
+export function App() {
+  return <Layout />;
+}
