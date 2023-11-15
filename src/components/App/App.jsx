@@ -1,5 +1,10 @@
+import { Route, Routes } from 'react-router-dom';
 import Layout from '../Layout';
 
 export function App() {
-  return <Layout />;
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />} />
+    </Routes>
+  );
 }
