@@ -1,12 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
 import Layout from '../Layout';
-import BusinessCard from '../BusinessCard/BusinessCard';
+import Home from '../../Page/Home/Home';
 
 export function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />} />
-      <Route index element={<BusinessCard />} />
     </Routes>
   );
 }

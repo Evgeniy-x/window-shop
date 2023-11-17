@@ -1,6 +1,6 @@
-import css from './BusinessCard.module.css';
+import css from './Home.module.css';
 
-const BusinessCard = () => {
+const Home = () => {
   return (
     <>
       <section className={css.container}>
@@ -60,4 +60,4 @@ const BusinessCard = () => {
   );
 };
 
-export default BusinessCard;
+export default Home;
