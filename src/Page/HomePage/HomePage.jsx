@@ -107,14 +107,14 @@ const Home = () => {
            </div> 
             <div className="glazing_price">
                 <p>2600 руб.кв.м.<br><span>под ключ с установкой</span></p>
-                <button className="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать стоимость</button>
+                <button className={button glazing_price_btn text-uppercase popup_calc_btn}>Рассчитать стоимость</button>
             </div>
           </div>
 
           <div className="col-md-6 no-padding">
-            <div className="glazing_warm">
+            <div className={glazing_warm}>
               <h3>теплое</h3>
-              <img src="assets/img/glazing/img_warm.png" alt="#">
+              {/* <img src="assets/img/glazing/img_warm.png" alt="#"> */}
               <ul>
                 <li>Конструктивная толщина профиля: 58-78 м</li>
                 <li>Остекление: однокамерные и двухкамерные стеклопакеты</li>
@@ -122,7 +122,7 @@ const Home = () => {
                 <li>Звукоизоляция: до 5 класса</li>
               </ul>
             </div> 
-             <div className="glazing_price">
+             <div className={glazing_price}>
                  <p>4000 руб.кв.м.<br><span>под ключ с установкой</span></p>
                  <button className="button glazing_price_btn text-uppercase popup_calc_btn">Рассчитать стоимость</button>
              </div>
