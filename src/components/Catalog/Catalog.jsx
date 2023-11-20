@@ -1,4 +1,9 @@
 import css from './Catalog.module.css';
+import woodenImg from '../../assets/images/glazing/icons/wooden.png';
+import aluminumImg from '../../assets/images/glazing/icons/aluminum.png';
+import plasticImg from '../../assets/images/glazing/icons/plastic.png';
+import frenchImg from '../../assets/images/glazing/icons/french.png';
+import takeOutImg from '../../assets/images/glazing/icons/takeOut.png';
 
 export const Catalog = () => {
   return (
@@ -12,35 +17,40 @@ export const Catalog = () => {
       <div className={css.glazing_slider}>
         <div className={'glazing_block text_center wow fadeInUp'}>
           {/* <img src="assets/img/glazing/icons/1.png" alt="#"> */}
-          <a className={css.tree_link}>Деревянное остекление</a>
+          <img src={woodenImg} alt="wooden" />
+          <a className={css.tree_link}>Дерев'яне скління</a>
         </div>
         <div
           className={'glazing_block text-center wow fadeInUp'}
           data-wow-delay="0.1s"
         >
           {/* <img src="assets/img/glazing/icons/2.png" alt="#"> */}
-          <a className={css.aluminum_link}>Алюминиевое остекление</a>
+          <img src={aluminumImg} alt="aluminum" />
+          <a className={css.aluminum_link}>Алюмінієве скління</a>
         </div>
         <div
           className={'glazing_block text-center wow fadeInUp'}
           data-wow-delay="0.2s"
         >
           {/* <img src="assets/img/glazing/icons/3.png" alt="#"> */}
-          <a className="plastic_link">Остекление пластиковыми рамами</a>
+          <img src={plasticImg} alt="plastic" />
+          <a className="plastic_link">Скління пластиковими рамами</a>
         </div>
         <div
           className={'glazing_block text-center wow fadeInUp'}
           data-wow-delay="0.3s"
         >
           {/* <img src="assets/img/glazing/icons/4.png" alt="#"> */}
-          <a className="french_link">Французское остекление (панорамное)</a>
+          <img src={frenchImg} alt="french" />
+          <a className="french_link">Французьке скління (панорамне)</a>
         </div>
         <div
           className={'glazing_block text-center wow fadeInUp'}
           data-wow-delay="0.4s"
         >
           {/* <img src="assets/img/glazing/icons/5.png" alt="#"> */}
-          <a className="rise_link">Остекление с выносом</a>
+          <img src={takeOutImg} alt="takeOut" />
+          <a className="rise_link">Скління з виносом</a>
         </div>
       </div>
     </>
