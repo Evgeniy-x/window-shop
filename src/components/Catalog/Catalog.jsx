@@ -1,9 +1,9 @@
+import { Link } from 'react-router-dom';
 import css from './Catalog.module.css';
 import woodenImg from '../../assets/images/glazing/icons/wooden.png';
 import aluminumImg from '../../assets/images/glazing/icons/aluminum.png';
 import plasticImg from '../../assets/images/glazing/icons/plastic.png';
 import frenchImg from '../../assets/images/glazing/icons/french.png';
-import takeOutImg from '../../assets/images/glazing/icons/takeOut.png';
 
 export const Catalog = () => {
   return (
@@ -16,9 +16,9 @@ export const Catalog = () => {
       {/* <!-- Slider --> */}
       <div className={css.glazing_slider}>
         <div className={'glazing_block text_center wow fadeInUp'}>
-          {/* <img src="assets/img/glazing/icons/1.png" alt="#"> */}
           <img src={woodenImg} alt="wooden" />
-          <a className={css.tree_link}>Дерев'яне скління</a>
+
+          <Link to={`catalog/wooden`}>Дерев'яне скління</Link>
         </div>
         <div
           className={'glazing_block text-center wow fadeInUp'}
@@ -26,7 +26,8 @@ export const Catalog = () => {
         >
           {/* <img src="assets/img/glazing/icons/2.png" alt="#"> */}
           <img src={aluminumImg} alt="aluminum" />
-          <a className={css.aluminum_link}>Алюмінієве скління</a>
+          <Link to={`catalog/aluminum`}>Алюмінієве скління</Link>
+          {/* <a className={css.aluminum_link}>Алюмінієве скління</a> */}
         </div>
         <div
           className={'glazing_block text-center wow fadeInUp'}
@@ -47,11 +48,7 @@ export const Catalog = () => {
         <div
           className={'glazing_block text-center wow fadeInUp'}
           data-wow-delay="0.4s"
-        >
-          {/* <img src="assets/img/glazing/icons/5.png" alt="#"> */}
-          <img src={takeOutImg} alt="takeOut" />
-          <a className="rise_link">Скління з виносом</a>
-        </div>
+        ></div>
       </div>
     </>
   );
