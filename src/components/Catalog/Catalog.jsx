@@ -18,7 +18,7 @@ export const Catalog = () => {
         <div className={'glazing_block text_center wow fadeInUp'}>
           <img src={woodenImg} alt="wooden" />
 
-          <Link to={`catalog/wooden`}>Дерев'яне скління</Link>
+          <Link to={`wooden`}>Дерев'яне скління</Link>
         </div>
         <div
           className={'glazing_block text-center wow fadeInUp'}
@@ -26,7 +26,7 @@ export const Catalog = () => {
         >
           {/* <img src="assets/img/glazing/icons/2.png" alt="#"> */}
           <img src={aluminumImg} alt="aluminum" />
-          <Link to={`catalog/aluminum`}>Алюмінієве скління</Link>
+          <Link to={`aluminum`}>Алюмінієве скління</Link>
           {/* <a className={css.aluminum_link}>Алюмінієве скління</a> */}
         </div>
         <div
@@ -35,7 +35,8 @@ export const Catalog = () => {
         >
           {/* <img src="assets/img/glazing/icons/3.png" alt="#"> */}
           <img src={plasticImg} alt="plastic" />
-          <a className="plastic_link">Скління пластиковими рамами</a>
+          <Link to={`plastic`}>Скління пластиковими рамами</Link>
+          {/* <a className="plastic_link">Скління пластиковими рамами</a> */}
         </div>
         <div
           className={'glazing_block text-center wow fadeInUp'}
@@ -43,7 +44,8 @@ export const Catalog = () => {
         >
           {/* <img src="assets/img/glazing/icons/4.png" alt="#"> */}
           <img src={frenchImg} alt="french" />
-          <a className="french_link">Французьке скління (панорамне)</a>
+          <Link to={`french`}>Французьке скління (панорамне)</Link>
+          {/* <a className="french_link">Французьке скління (панорамне)</a> */}
         </div>
         <div
           className={'glazing_block text-center wow fadeInUp'}
