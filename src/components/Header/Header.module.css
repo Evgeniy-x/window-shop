@@ -1,0 +1,116 @@
+/* Головний контейнер хедера */
+.header {
+  background-color: #fff; /* Колір фону хедера */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тінь хедера */
+  padding: 15px 0; /* Внутрішні відступи */
+}
+
+/* Контейнер для вмісту хедера */
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Рядок хедера */
+.header_row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Логотип */
+.logo {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+.logo_link {
+  margin-right: 20px; /* Відступ між логотипом та текстом */
+}
+
+.logo_link a {
+  text-decoration: none;
+  color: #333; /* Колір тексту логотипу */
+  font-size: 24px; /* Розмір тексту логотипу */
+  font-weight: bold;
+}
+
+/* Опис під логотипом */
+.logo p {
+  margin: 0;
+  font-size: 14px;
+  color: #777; /* Колір тексту опису */
+}
+
+/* Кнопка "Викликати замірника" */
+.header_btn {
+  background-color: #4caf50; /* Колір фону кнопки */
+  color: #fff; /* Колір тексту кнопки */
+  padding: 10px 20px; /* Внутрішні відступи кнопки */
+  border: none;
+  border-radius: 5px; /* Закруглені кути */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.header_btn:hover {
+  background-color: #45a049; /* Колір фону кнопки при наведенні */
+}
+
+/* Графік роботи */
+.working_hours {
+  display: flex;
+  align-items: center;
+  margin-left: 20px; /* Відступ між кнопкою та графіком роботи */
+}
+
+.working_hours_img img {
+  width: 30px; /* Розмір іконки годинника */
+  margin-right: 10px; /* Відступ між іконкою та текстом */
+}
+
+.working_hours p {
+  margin: 0;
+  font-size: 14px;
+  color: #555; /* Колір тексту графіку роботи */
+}
+
+.working_hours span {
+  font-weight: bold;
+  color: #4caf50; /* Колір тексту для робочих годин */
+}
+
+/* Контакти */
+.contact {
+  display: flex;
+  align-items: center;
+}
+
+.contact_us a {
+  text-decoration: none;
+  color: #333; /* Колір тексту контактів */
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Відступ між контактами та іншими елементами */
+}
+
+.contact_us img {
+  width: 30px; /* Розмір іконки телефону */
+  margin-right: 10px; /* Відступ між іконкою та текстом */
+}
+
+.phone_link {
+  color: #4caf50; /* Колір тексту посилання "Замовити дзвінок" */
+}
+
+.phone_link:hover {
+  text-decoration: underline; /* Підкреслений текст при наведенні */
+}

@@ -1,21 +1,62 @@
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+/* Стилі для заголовка секції */
+.section_header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section_header h2 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.section_header_sub {
+  width: 50px;
+  height: 4px;
+  background-color: #4caf50;
+  margin: 0 auto;
+}
+
+/* Стилі для слайдера каталогу товарів */
+.glazing_slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
 }
 
 .image_container {
-  width: 200px;
-  height: 200px;
-  overflow: hidden;
   position: relative;
+  text-align: center;
+  overflow: hidden;
 }
 
 .fade_in_image {
   width: 100%;
   height: auto;
-  animation: fadeIn 3s ease-in-out;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image_container img:hover {
+  opacity: 1;
+}
+
+.image_container a {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.image_container:hover a {
+  opacity: 1;
 }

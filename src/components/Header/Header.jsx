@@ -10,17 +10,15 @@ const AppHeader = () => {
     <>
       <header className={css.header}>
         <div className={css.container}>
-          <div className={css.row}>
-            <div className={css.col_md_5}>
-              <div className={css.logo}>
-                <div className={css.logo_img}>
-                  <Link to={`wooden`}> EUROBUD</Link>
-                </div>
-                <p>Скління вікон та балконів в Києві та Київській області</p>
+          <div className={css.header_row}>
+            <div className={css.logo}>
+              <div className={css.logo_link}>
+                <Link to={`/`}> EUROBUD</Link>
               </div>
+              <p>Скління вікон та балконів в Києві та Київській області</p>
             </div>
 
-            <div className={css.col}>
+            <div className={css.header_col}>
               <div className={css.header_btn_wrap}>
                 <div className={css.header_btn_wrap_block}>
                   <button className={css.header_btn}>
@@ -41,9 +39,9 @@ const AppHeader = () => {
               </div>
             </div>
 
-            <div className={css.col}>
-              <div className={css.contact_us}>
-                <div className={css.contact_us_wrap}>
+            <div className={css.header_col}>
+              <div className={css.contact}>
+                <div className={css.contact_us}>
                   <a href="tel:+380999891100">
                     <img src={phoneImg} alt="phone" />
                     +38 099-989-11-00

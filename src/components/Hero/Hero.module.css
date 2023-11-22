@@ -1,0 +1,64 @@
+/* Основний контейнер */
+.container {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+}
+
+/* Заголовок */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Анімація для заголовка */
+h1 span {
+  display: inline-block;
+  transform-origin: 50% 50%;
+  animation: colorChange 4s infinite alternate;
+}
+
+/* Анімація для головного блоку особливостей */
+.main_features_block {
+  background-color: #4caf50; /* Колір фону блоку особливостей */
+  color: #fff; /* Колір тексту в блоку особливостей */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Анімація для блоку особливостей при наведенні */
+.main_features_block:hover {
+  transform: scale(1.05);
+}
+
+/* Анімація для іконки особливості (ваші img елементи) */
+.main_features_block img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  animation: rotateIcon 3s infinite linear;
+}
+
+/* Ключові кадри для анімацій */
+@keyframes colorChange {
+  0% {
+    color: #4caf50;
+  }
+  100% {
+    color: #ff9800;
+  }
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
