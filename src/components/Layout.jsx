@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom';
-import AppHeader from './AppHeader/AppHeader';
+import Header from './Header/Header';
 
 const Layout = () => {
   return (
     <>
-      <AppHeader />
+      <Header />
       <main style={{ textAlign: 'center' }}>
         <Outlet />
       </main>

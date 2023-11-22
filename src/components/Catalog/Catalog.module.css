@@ -1,0 +1,21 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.image_container {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fade_in_image {
+  width: 100%;
+  height: auto;
+  animation: fadeIn 5s ease-in-out;
+}
