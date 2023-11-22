@@ -8,8 +8,8 @@
 }
 
 .image_container {
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   overflow: hidden;
   position: relative;
 }
@@ -17,5 +17,5 @@
 .fade_in_image {
   width: 100%;
   height: auto;
-  animation: fadeIn 5s ease-in-out;
+  animation: fadeIn 3s ease-in-out;
 }

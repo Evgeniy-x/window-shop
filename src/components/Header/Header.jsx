@@ -1,4 +1,9 @@
 import css from './Header.module.css';
+import logoImg from '../../assets/images/header/logo.png';
+import clockImg from '../../assets/images/header/clock.png';
+import editImg from '../../assets/images/header/edit.png';
+import phoneImg from '../../assets/images/header/phone.png';
+import { Link } from 'react-router-dom';
 
 const AppHeader = () => {
   return (
@@ -9,7 +14,7 @@ const AppHeader = () => {
             <div className={css.col_md_5}>
               <div className={css.logo}>
                 <div className={css.logo_img}>
-                  {/* <img src="assets/img/header/logo.png" alt="#"> */}
+                  <Link to={`wooden`}> EUROBUD</Link>
                 </div>
                 <p>Скління вікон та балконів в Києві та Київській області</p>
               </div>
@@ -28,7 +33,7 @@ const AppHeader = () => {
             <div>
               <div className={css.working_hours}>
                 <div className={css.working_hours_img}>
-                  {/* <img src="assets/img/header/clock.png" alt="#"> */}
+                  <img src={clockImg} alt="clock" />
                 </div>
                 <p>
                   без вихідних <span>9:00 - 18:00</span>
@@ -39,8 +44,8 @@ const AppHeader = () => {
             <div className={css.col}>
               <div className={css.contact_us}>
                 <div className={css.contact_us_wrap}>
-                  <a href="#">
-                    {/* <img src="assets/img/header/phone.png" alt="#"> */}
+                  <a href="tel:+380999891100">
+                    <img src={phoneImg} alt="phone" />
                     +38 099-989-11-00
                   </a>
                   <a className={css.phone_link} href="#">
