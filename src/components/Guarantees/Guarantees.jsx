@@ -1,4 +1,11 @@
 import css from './Guarantees.module.css';
+import headerImg from '../../assets/images/guarantees/header_sub.png';
+import firstImg from '../../assets/images/guarantees/1.png';
+import secondImg from '../../assets/images/guarantees/2.png';
+import thirdImg from '../../assets/images/guarantees/3.png';
+import fourthImg from '../../assets/images/guarantees/4.png';
+import fifthImg from '../../assets/images/guarantees/5.png';
+import sixthImg from '../../assets/images/guarantees/6.png';
 
 export const Guarantees = () => {
   return (
@@ -12,37 +19,37 @@ export const Guarantees = () => {
           <div className={css.row}>
             <div>
               <div className={css.guarantees_block}>
-                {/* <img src="assets/img/guarantees/1.png" alt="#"> */}
+                <img src={firstImg} alt="guarantees" />
                 <h3>Висока якість</h3>
               </div>
             </div>
             <div>
               <div className={css.guarantees_block}>
-                {/* <img src="assets/img/guarantees/2.png" alt=""> */}
+                <img src={secondImg} alt="guarantees" />
                 <h3>Виконання робіт під ключ</h3>
               </div>
             </div>
             <div>
               <div className={css.guarantees_block}>
-                {/* <img src="assets/img/guarantees/3.png" alt=""> */}
+                <img src={thirdImg} alt="guarantees" />
                 <h3>Монтаж в короткі терміни</h3>
               </div>
             </div>
             <div>
               <div className={css.guarantees_block}>
-                {/* <img src="assets/img/guarantees/4.png" alt=""> */}
+                <img src={fourthImg} alt="guarantees" />
                 <h3>Ціни від виробника</h3>
               </div>
             </div>
             <div>
               <div className={css.guarantees_block}>
-                {/* <img src="assets/img/guarantees/5.png" alt=""> */}
+                <img src={fifthImg} alt="guarantees" />
                 <h3>Безкоштовний замір і консультація</h3>
               </div>
             </div>
             <div>
               <div className={css.guarantees_block}>
-                {/* <img src="assets/img/guarantees/6.png" alt=""> */}
+                <img src={sixthImg} alt="guarantees" />
                 <h3>Тепло і затишок на балконі</h3>
               </div>
             </div>

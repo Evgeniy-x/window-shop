@@ -37,13 +37,19 @@
   border-radius: 10px;
   padding: 20px;
   margin: 20px;
-  width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
 
 .guarantees_block:hover {
   transform: translateY(-5px);
+}
+
+.guarantees_block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
 }
 
 .guarantees_block h3 {
