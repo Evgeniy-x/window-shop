@@ -9,10 +9,7 @@ export const Hero = () => {
     <>
       <section className={css.container}>
         <div className={css.row}>
-          <h1>
-            <span>Скління балконів "під ключ"</span>
-            за 7 000 гривень!
-          </h1>
+          <h1>Скління балконів "під ключ" від 7 000 гривень!</h1>
           <div>
             <div className={css.main_features}>
               <div className={css.col}>

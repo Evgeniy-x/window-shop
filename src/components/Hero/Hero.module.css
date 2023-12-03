@@ -1,64 +1,69 @@
-/* Основний контейнер */
 .container {
+  /* max-width: 800px; */
+  margin: 0 auto;
   text-align: center;
-  padding: 40px 20px;
-  background-color: #f8f8f8;
+  padding: 60px 0;
+  background: #ffffff url(../../assets/images/hero/background.png) 0 0 no-repeat;
+  background-size: cover;
 }
 
-/* Заголовок */
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 h1 {
-  font-size: 24px;
+  font-size: 36px;
   margin-bottom: 20px;
-}
-
-/* Анімація для заголовка */
-h1 span {
-  display: inline-block;
-  transform-origin: 50% 50%;
-  animation: colorChange 4s infinite alternate;
-}
-
-/* Анімація для головного блоку особливостей */
-.main_features_block {
-  background-color: #4caf50; /* Колір фону блоку особливостей */
-  color: #fff; /* Колір тексту в блоку особливостей */
-  padding: 20px;
-  border-radius: 10px;
+  color: #333;
   text-align: center;
-  margin: 10px;
-  overflow: hidden;
+}
+
+span {
+  color: #4caf50;
+}
+
+.main_features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.col {
+  flex: 1;
+  margin: 0 10px;
+}
+
+.main_features_block {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
+  text-align: center;
 }
 
-/* Анімація для блоку особливостей при наведенні */
 .main_features_block:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
 }
 
-/* Анімація для іконки особливості (ваші img елементи) */
-.main_features_block img {
+img {
   max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
-  animation: rotateIcon 3s infinite linear;
+  margin-bottom: 15px;
 }
 
-/* Ключові кадри для анімацій */
-@keyframes colorChange {
-  0% {
-    color: #4caf50;
-  }
-  100% {
-    color: #ff9800;
-  }
+p {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
 }
 
-@keyframes rotateIcon {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+    align-items: flex-start;
   }
 }
