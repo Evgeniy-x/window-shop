@@ -13,8 +13,8 @@ export function App() {
         <Route index element={<HomePage />} />
         <Route path="wooden" element={<WoodenGlazing />} />
         <Route path="aluminum" element={<AluminumGlazing />} />
-        <Route path="plastic" element={<PlasticGlazing />} />
-        <Route path="french" element={<FrenchGlazing />} />
+        {/* <Route path="plastic" element={<PlasticGlazing />} />
+        <Route path="french" element={<FrenchGlazing />} /> */}
       </Route>
     </Routes>
   );
