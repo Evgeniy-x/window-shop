@@ -5,6 +5,7 @@ import guaranty from '../../assets/images/hero/guaranty.png';
 import delivery from '../../assets/images/hero/delivery.png';
 
 export const Hero = () => {
+  const clasOne = css.container + ' ' + css.one;
   return (
     <>
       <section className={css.container}>
