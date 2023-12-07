@@ -19,33 +19,27 @@ export const Hero = () => {
               <p className={css.advantages_text}>Висока якість</p>
             </div>
 
-            <div className={css.col}>
-              <div className={css.advantages_block}>
-                <img className={css.advantages_img} src={time} alt="time" />
-                <p className={css.advantages_text}>Швидкий монтаж</p>
-              </div>
+            <div className={css.advantages_block}>
+              <img className={css.advantages_img} src={time} alt="time" />
+              <p className={css.advantages_text}>Швидкий монтаж</p>
             </div>
 
-            <div className={css.col}>
-              <div className={css.advantages_block}>
-                <img
-                  className={css.advantages_img}
-                  src={guaranty}
-                  alt="guaranty"
-                />
-                <p className={css.advantages_text}>Гарантія 3 роки</p>
-              </div>
+            <div className={css.advantages_block}>
+              <img
+                className={css.advantages_img}
+                src={guaranty}
+                alt="guaranty"
+              />
+              <p className={css.advantages_text}>Гарантія 3 роки</p>
             </div>
 
-            <div className={css.col}>
-              <div className={css.advantages_block}>
-                <img
-                  className={css.advantages_img}
-                  src={delivery}
-                  alt="delivery"
-                />
-                <p className={css.advantages_text}>Вивіз сміття</p>
-              </div>
+            <div className={css.advantages_block}>
+              <img
+                className={css.advantages_img}
+                src={delivery}
+                alt="delivery"
+              />
+              <p className={css.advantages_text}>Вивіз сміття</p>
             </div>
           </div>
         </div>
