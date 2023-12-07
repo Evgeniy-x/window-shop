@@ -9,36 +9,36 @@ export const Hero = () => {
   return (
     <>
       <section className={css.container}>
-        <div className={css.row}>
-          <h1>Скління балконів "під ключ" від 7 000 гривень!</h1>
-          <div>
-            <div className={css.main_features}>
-              <div className={css.col}>
-                <div className={css.main_features_block}>
-                  <img src={quality} alt="quality" />
-                  <p>Висока якість</p>
-                </div>
+        <h1 className={css.title}>
+          Скління балконів "під ключ" від 7 000 гривень!
+        </h1>
+        <div>
+          <div className={css.main_features}>
+            <div className={css.col}>
+              <div className={css.main_features_block}>
+                <img src={quality} alt="quality" />
+                <p>Висока якість</p>
               </div>
+            </div>
 
-              <div className={css.col}>
-                <div className={css.main_features_block}>
-                  <img src={time} alt="time" />
-                  <p>Швидкий монтаж</p>
-                </div>
+            <div className={css.col}>
+              <div className={css.main_features_block}>
+                <img src={time} alt="time" />
+                <p>Швидкий монтаж</p>
               </div>
+            </div>
 
-              <div className={css.col}>
-                <div className={css.main_features_block}>
-                  <img src={guaranty} alt="guaranty" />
-                  <p>Гарантія 3 роки</p>
-                </div>
+            <div className={css.col}>
+              <div className={css.main_features_block}>
+                <img src={guaranty} alt="guaranty" />
+                <p>Гарантія 3 роки</p>
               </div>
+            </div>
 
-              <div className={css.col}>
-                <div className={css.main_features_block}>
-                  <img src={delivery} alt="delivery" />
-                  <p>Вивіз сміття</p>
-                </div>
+            <div className={css.col}>
+              <div className={css.main_features_block}>
+                <img src={delivery} alt="delivery" />
+                <p>Вивіз сміття</p>
               </div>
             </div>
           </div>
