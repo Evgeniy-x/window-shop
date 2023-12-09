@@ -1,20 +1,14 @@
-/* Головний контейнер хедера */
 .header {
-  background-color: #fff; /* Колір фону хедера */
+  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тінь хедера */
-  padding: 15px 0; /* Внутрішні відступи */
 }
 
 /* Контейнер для вмісту хедера */
 .container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  width: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  padding: 10px 20px;
 }
 
 /* Рядок хедера */
@@ -26,10 +20,10 @@
 }
 
 /* Логотип */
-.logo {
+.logo_block {
   display: flex;
   flex-direction: column;
-  width: 150px;
+  width: 200px;
 }
 
 .logo_link {
