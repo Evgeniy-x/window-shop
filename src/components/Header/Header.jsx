@@ -5,7 +5,7 @@ import editImg from '../../assets/images/header/edit.png';
 import phoneImg from '../../assets/images/header/phone.png';
 import { Link } from 'react-router-dom';
 
-const AppHeader = () => {
+export const Header = () => {
   return (
     <>
       <header className={css.header}>
@@ -58,5 +58,3 @@ const AppHeader = () => {
     </>
   );
 };
-
-export default AppHeader;
