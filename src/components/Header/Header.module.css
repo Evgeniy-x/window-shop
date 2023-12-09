@@ -3,7 +3,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тінь хедера */
 }
 
-/* Контейнер для вмісту хедера */
 .container {
   display: flex;
   justify-content: space-between;
@@ -11,52 +10,47 @@
   padding: 10px 20px;
 }
 
-/* Рядок хедера */
-.header_row {
-  display: flex;
-  gap: 20px;
-  justify-content: space-around;
-  align-items: center;
-}
-
 /* Логотип */
 .logo_block {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  row-gap: 10px;
+  width: 230px;
 }
 
 .logo_link {
-  margin-right: 20px; /* Відступ між логотипом та текстом */
-}
-
-.logo_link a {
+  color: #0089cd;
+  font-size: 24px;
+  font-weight: 700;
   text-decoration: none;
-  color: #333; /* Колір тексту логотипу */
-  font-size: 24px; /* Розмір тексту логотипу */
-  font-weight: bold;
 }
 
-/* Опис під логотипом */
-.logo p {
-  margin: 0;
-  font-size: 14px;
-  color: #777; /* Колір тексту опису */
+.logo_text {
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 500;
+  color: #708696;
 }
 
 /* Кнопка "Викликати замірника" */
+
 .header_btn {
-  background-color: #4caf50; /* Колір фону кнопки */
-  color: #fff; /* Колір тексту кнопки */
-  padding: 10px 20px; /* Внутрішні відступи кнопки */
-  border: none;
-  border-radius: 5px; /* Закруглені кути */
+}
+
+.button {
+  background: url(../../assets/images/header/edit.png) 1rem center no-repeat;
+  color: #45a049;
+  font-size: 16 px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: 2px solid #55a831;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .header_btn:hover {
-  background-color: #45a049; /* Колір фону кнопки при наведенні */
+  background-color: #45a049;
 }
 
 /* Графік роботи */

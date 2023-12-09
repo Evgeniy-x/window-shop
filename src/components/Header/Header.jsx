@@ -1,7 +1,6 @@
 import css from './Header.module.css';
-import logoImg from '../../assets/images/header/logo.png';
+// import logoImg from '../../assets/images/header/logo.png';
 import clockImg from '../../assets/images/header/clock.png';
-import editImg from '../../assets/images/header/edit.png';
 import phoneImg from '../../assets/images/header/phone.png';
 import { Link } from 'react-router-dom';
 
@@ -19,12 +18,10 @@ export const Header = () => {
             </p>
           </div>
 
-          <div className={css.header_col}>
-            <div className={css.header_btn_wrap}>
-              <div className={css.header_btn_wrap_block}>
-                <button className={css.header_btn}>Викликати замірника</button>
-              </div>
-            </div>
+          <div className={css.header_btn}>
+            <button className={css.button}>
+              Викликати <br /> замірника
+            </button>
           </div>
 
           <div>
