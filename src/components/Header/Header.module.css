@@ -1,6 +1,6 @@
 .header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тінь хедера */
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .container {
@@ -23,6 +23,11 @@
   font-size: 24px;
   font-weight: 700;
   text-decoration: none;
+  transition: color 1000ms;
+}
+
+.logo_link:hover {
+  color: #45a049;
 }
 
 .logo_text {
@@ -34,23 +39,22 @@
 
 /* Кнопка "Викликати замірника" */
 
-.header_btn {
-}
-
 .button {
-  background: url(../../assets/images/header/edit.png) 1rem center no-repeat;
+  background: url(../../assets/images/header/edit.png) 10px center no-repeat;
   color: #45a049;
-  font-size: 16 px;
+  font-size: 16px;
   font-weight: 700;
   padding: 10px 20px;
+  padding-left: 60px;
   border: 2px solid #55a831;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: color 300ms, border 300ms;
 }
 
-.header_btn:hover {
-  background-color: #45a049;
+.button:hover {
+  color: #0089cd;
+  border: 2px solid #0089cd;
 }
 
 /* Графік роботи */
@@ -60,20 +64,21 @@
   margin-left: 20px; /* Відступ між кнопкою та графіком роботи */
 }
 
-.working_hours_img img {
-  width: 30px; /* Розмір іконки годинника */
-  margin-right: 10px; /* Відступ між іконкою та текстом */
+.working_img {
+  margin-right: 10px;
 }
 
-.working_hours p {
+.working_text {
   margin: 0;
-  font-size: 14px;
-  color: #555; /* Колір тексту графіку роботи */
+  font-size: 16px;
+  color: #555;
 }
 
 .working_hours span {
+  display: block;
+  margin-top: 5px;
   font-weight: bold;
-  color: #4caf50; /* Колір тексту для робочих годин */
+  color: #4caf50;
 }
 
 /* Контакти */

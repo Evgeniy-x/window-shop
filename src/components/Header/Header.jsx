@@ -1,5 +1,4 @@
 import css from './Header.module.css';
-// import logoImg from '../../assets/images/header/logo.png';
 import clockImg from '../../assets/images/header/clock.png';
 import phoneImg from '../../assets/images/header/phone.png';
 import { Link } from 'react-router-dom';
@@ -24,15 +23,11 @@ export const Header = () => {
             </button>
           </div>
 
-          <div>
-            <div className={css.working_hours}>
-              <div className={css.working_hours_img}>
-                <img src={clockImg} alt="clock" />
-              </div>
-              <p>
-                без вихідних <span>9:00 - 18:00</span>
-              </p>
-            </div>
+          <div className={css.working_hours}>
+            <img className={css.working_img} src={clockImg} alt="clock" />
+            <p className={css.working_text}>
+              без вихідних <span>9:00 - 18:00</span>
+            </p>
           </div>
 
           <div className={css.header_col}>
