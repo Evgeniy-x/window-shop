@@ -1,9 +1,43 @@
 import css from './Header.module.css';
+import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
+import { useState } from 'react';
 import clockImg from '../../assets/images/header/clock.png';
 import phoneImg from '../../assets/images/header/phone.png';
-import { Link } from 'react-router-dom';
+
+Modal.setAppElement('#root');
 
 export const Header = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [name, setName] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
+  const handleNameChange = e => {
+    setName(e.target.value);
+  };
+
+  const handlePhoneNumberChange = e => {
+    setPhoneNumber(e.target.value);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    // Тут можна реалізувати логіку для відправлення замовлення зворотного дзвінка
+    console.log('Відправлено замовлення зворотного дзвінка:', {
+      name,
+      phoneNumber,
+    });
+    closeModal();
+  };
+
   return (
     <>
       <header className={css.header}>
@@ -35,12 +69,42 @@ export const Header = () => {
               <img src={phoneImg} alt="phone" />
               +38 099-989-11-00
             </a>
-            <a className={css.phone_link} href="#">
+            <a onClick={openModal} className={css.phone_link} href="#">
               Замовити дзвінок
             </a>
           </div>
         </div>
       </header>
+
+      <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Замовлення зворотного дзвінка"
+        className={css.modal_content}
+        overlayClassName={css.modal_overlay}
+      >
+        <h2 className={css.modal_header}>Замовлення зворотного дзвінка</h2>
+        <form onSubmit={handleSubmit} className={css.modal_form}>
+          <label className={css.form_name}>
+            Ваше ім'я:
+            <input type="text" value={name} onChange={handleNameChange} />
+          </label>
+          <label className={css.form_phone}>
+            Номер телефону:
+            <input
+              type="tel"
+              value={phoneNumber}
+              onChange={handlePhoneNumberChange}
+            />
+          </label>
+          <button className={css.form_button} type="submit">
+            Відправити
+          </button>
+        </form>
+        <button onClick={closeModal} className={css.modal_close}>
+          Закрити
+        </button>
+      </Modal>
     </>
   );
 };
