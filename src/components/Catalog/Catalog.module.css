@@ -5,6 +5,7 @@
 
 .gatalog_header {
   position: relative;
+  font-size: 30px;
   text-align: center;
   margin: 0 auto;
 }
@@ -17,11 +18,38 @@
   background-color: #3498db;
   position: absolute;
   left: 50%;
-  top: 35px;
+  top: 40px;
   transform: translateX(-50%);
-  transition: width 500ms ease; /* Анімація збільшення/зменшення ширини лінії */
+  transition: width 500ms ease;
 }
 
 .gatalog_header:hover::after {
-  width: 60%; /* Збільшити ширину лінії при наведенні курсору */
+  width: 60%;
+}
+
+.gatalog {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+
+.gatalog_link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  font-size: 20px;
+  font-weight: 500;
+  color: inherit;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 300ms ease-in-out;
+}
+
+.gatalog_link:hover {
+  transform: scale(1.2);
+}
+
+.gatalog_link img {
+  width: 120px;
 }

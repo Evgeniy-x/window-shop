@@ -21,53 +21,49 @@ import big_eighthImg from '../../assets/images/our_works/big_img/8.png';
 export const OurWorks = () => {
   return (
     <>
-      <section className={'works'}>
-        <div className={css.container}>
-          <div className={css.section_header}>
-            <h2>Наші роботи</h2>
-            <div className={css.section_header_sub}></div>
+      <section className={css.container}>
+        <h2 className={css.works_header}>Наші роботи</h2>
+
+        <div className={css.works}>
+          <div>
+            <a href={big_firstImg}>
+              <img className={css.preview} src={firstImg} alt="window" />
+            </a>
           </div>
-          <div className={css.row}>
-            <div>
-              <a href={big_firstImg}>
-                <img className={css.preview} src={firstImg} alt="window" />
-              </a>
-            </div>
-            <div>
-              <a href={big_secondImg}>
-                <img className={css.preview} src={secondImg} alt="window" />
-              </a>
-            </div>
-            <div>
-              <a href={big_thirdImg}>
-                <img className={css.preview} src={thirdImg} alt="window" />
-              </a>
-            </div>
-            <div>
-              <a href={big_fourthImg}>
-                <img className={css.preview} src={fourthImg} alt="window" />
-              </a>
-            </div>
-            <div>
-              <a href={big_fifthImg}>
-                <img className={css.preview} src={fifthImg} alt="window" />
-              </a>
-            </div>
-            <div>
-              <a href={big_sixthImg}>
-                <img className={css.preview} src={sixthImg} alt="window" />
-              </a>
-            </div>
-            <div>
-              <a href={big_seventhImg}>
-                <img className={css.preview} src={seventhImg} alt="window" />
-              </a>
-            </div>
-            <div>
-              <a href={big_eighthImg}>
-                <img className={css.preview} src={eighthImg} alt="window" />
-              </a>
-            </div>
+          <div>
+            <a href={big_secondImg}>
+              <img className={css.preview} src={secondImg} alt="window" />
+            </a>
+          </div>
+          <div>
+            <a href={big_thirdImg}>
+              <img className={css.preview} src={thirdImg} alt="window" />
+            </a>
+          </div>
+          <div>
+            <a href={big_fourthImg}>
+              <img className={css.preview} src={fourthImg} alt="window" />
+            </a>
+          </div>
+          <div>
+            <a href={big_fifthImg}>
+              <img className={css.preview} src={fifthImg} alt="window" />
+            </a>
+          </div>
+          <div>
+            <a href={big_sixthImg}>
+              <img className={css.preview} src={sixthImg} alt="window" />
+            </a>
+          </div>
+          <div>
+            <a href={big_seventhImg}>
+              <img className={css.preview} src={seventhImg} alt="window" />
+            </a>
+          </div>
+          <div>
+            <a href={big_eighthImg}>
+              <img className={css.preview} src={eighthImg} alt="window" />
+            </a>
           </div>
         </div>
       </section>

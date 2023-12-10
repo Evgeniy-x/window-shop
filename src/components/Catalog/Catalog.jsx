@@ -7,30 +7,30 @@ import frenchImg from '../../assets/images/glazing/icons/french.png';
 
 export const Catalog = () => {
   return (
-    <div className={css.container}>
+    <section className={css.container}>
       <h2 className={css.gatalog_header}>Скління балконів та лоджій</h2>
 
       <div className={css.gatalog}>
-        <div className={css.gatalog_link}>
+        <Link to={`wooden`} className={css.gatalog_link}>
           <img className={css.gatalog_img} src={woodenImg} alt="wooden" />
-          <Link to={`wooden`}>Дерев'яне скління</Link>
-        </div>
+          Дерев'яне скління
+        </Link>
 
-        <div className={css.gatalog_link}>
+        <Link to={`aluminum`} className={css.gatalog_link}>
           <img className={css.gatalog_img} src={aluminumImg} alt="aluminum" />
-          <Link to={`aluminum`}>Алюмінієве скління</Link>
-        </div>
+          Алюмінієве скління
+        </Link>
 
-        <div className={css.gatalog_link}>
+        <Link to={`plastic`} className={css.gatalog_link}>
           <img className={css.gatalog_img} src={plasticImg} alt="plastic" />
-          <Link to={`plastic`}>Скління пластиковими рамами</Link>
-        </div>
+          Скління пластиковими рамами
+        </Link>
 
-        <div className={css.gatalog_link}>
+        <Link to={`french`} className={css.gatalog_link}>
           <img className={css.gatalog_img} src={frenchImg} alt="french" />
-          <Link to={`french`}>Французьке скління (панорамне)</Link>
-        </div>
+          Французьке скління (панорамне)
+        </Link>
       </div>
-    </div>
+    </section>
   );
 };
