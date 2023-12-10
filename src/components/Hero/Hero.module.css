@@ -23,7 +23,6 @@
 .advantages_block {
   position: relative;
   transition: transform 300ms ease-in-out;
-  cursor: pointer;
 }
 
 .advantages_block:hover {

@@ -7,42 +7,30 @@ import frenchImg from '../../assets/images/glazing/icons/french.png';
 
 export const Catalog = () => {
   return (
-    <>
-      <div className={css.section_header}>
-        <h2>Скління балконів та лоджій</h2>
-        <div className={css.section_header_sub}></div>
-      </div>
+    <div className={css.container}>
+      <h2 className={css.gatalog_header}>Скління балконів та лоджій</h2>
 
-      {/* <!-- Slider --> */}
-      <div className={css.glazing_slider}>
-        <div className={css.image_container}>
-          <img className={css.fade_in_image} src={woodenImg} alt="wooden" />
-
+      <div className={css.gatalog}>
+        <div className={css.gatalog_link}>
+          <img className={css.gatalog_img} src={woodenImg} alt="wooden" />
           <Link to={`wooden`}>Дерев'яне скління</Link>
         </div>
-        <div className={css.image_container} data-wow-delay="0.1s">
-          {/* <img src="assets/img/glazing/icons/2.png" alt="#"> */}
-          <img className={css.fade_in_image} src={aluminumImg} alt="aluminum" />
+
+        <div className={css.gatalog_link}>
+          <img className={css.gatalog_img} src={aluminumImg} alt="aluminum" />
           <Link to={`aluminum`}>Алюмінієве скління</Link>
-          {/* <a className={css.aluminum_link}>Алюмінієве скління</a> */}
         </div>
-        <div className={css.image_container} data-wow-delay="0.2s">
-          {/* <img src="assets/img/glazing/icons/3.png" alt="#"> */}
-          <img className={css.fade_in_image} src={plasticImg} alt="plastic" />
+
+        <div className={css.gatalog_link}>
+          <img className={css.gatalog_img} src={plasticImg} alt="plastic" />
           <Link to={`plastic`}>Скління пластиковими рамами</Link>
-          {/* <a className="plastic_link">Скління пластиковими рамами</a> */}
         </div>
-        <div className={css.image_container} data-wow-delay="0.3s">
-          {/* <img src="assets/img/glazing/icons/4.png" alt="#"> */}
-          <img className={css.fade_in_image} src={frenchImg} alt="french" />
+
+        <div className={css.gatalog_link}>
+          <img className={css.gatalog_img} src={frenchImg} alt="french" />
           <Link to={`french`}>Французьке скління (панорамне)</Link>
-          {/* <a className="french_link">Французьке скління (панорамне)</a> */}
         </div>
-        <div
-          className={'glazing_block text-center wow fadeInUp'}
-          data-wow-delay="0.4s"
-        ></div>
       </div>
-    </>
+    </div>
   );
 };

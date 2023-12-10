@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Catalog />ц
+      <Catalog />
       <OurWorks />
       <Guarantees />
     </>
