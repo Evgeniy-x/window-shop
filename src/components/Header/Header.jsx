@@ -31,10 +31,12 @@ export const Header = () => {
   const handleSubmit = e => {
     e.preventDefault();
     // Тут можна реалізувати логіку для відправлення замовлення зворотного дзвінка
-    console.log('Відправлено замовлення зворотного дзвінка:', {
+    console.log('Замовлення зворотного дзвінка:', {
       name,
       phoneNumber,
     });
+    setName('');
+    setPhoneNumber('');
     closeModal();
   };
 
@@ -80,25 +82,33 @@ export const Header = () => {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Замовлення зворотного дзвінка"
-        className={css.modal_content}
+        className={css.modal_callBack}
         overlayClassName={css.modal_overlay}
       >
         <h2 className={css.modal_header}>Замовлення зворотного дзвінка</h2>
         <form onSubmit={handleSubmit} className={css.modal_form}>
-          <label className={css.form_name}>
-            Ваше ім'я:
-            <input type="text" value={name} onChange={handleNameChange} />
+          <label htmlFor="name">
+            <input
+              type="text"
+              value={name}
+              onChange={handleNameChange}
+              className={css.form_input}
+              placeholder="Ваше ім'я"
+              id="name"
+            />
           </label>
-          <label className={css.form_phone}>
-            Номер телефону:
+          <label htmlFor="phone">
             <input
               type="tel"
               value={phoneNumber}
               onChange={handlePhoneNumberChange}
+              className={css.form_input}
+              placeholder="+38"
+              id="phone"
             />
           </label>
           <button className={css.form_button} type="submit">
-            Відправити
+            Замовити дзвінок
           </button>
         </form>
         <button onClick={closeModal} className={css.modal_close}>
