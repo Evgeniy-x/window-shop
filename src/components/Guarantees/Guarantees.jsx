@@ -10,49 +10,38 @@ import sixthImg from '../../assets/images/guarantees/6.png';
 export const Guarantees = () => {
   return (
     <>
-      <section className={css.guarantees}>
-        <div className={css.container}>
-          <div className={css.guarantees_header}>
-            <h2>Ми гарантуємо вам</h2>
-            <div className={css.section_header_sub}></div>
+      <section className={css.container}>
+        <h2 className={css.guarantees_title}>МИ ГАРАНТУЄМО ВАМ</h2>
+
+        <div className={css.guarantees_list}>
+          <div className={css.guarantees_block}>
+            <img src={firstImg} alt="guarantees" />
+            <h3>Висока якість</h3>
           </div>
-          <div className={css.row}>
-            <div>
-              <div className={css.guarantees_block}>
-                <img src={firstImg} alt="guarantees" />
-                <h3>Висока якість</h3>
-              </div>
-            </div>
-            <div>
-              <div className={css.guarantees_block}>
-                <img src={secondImg} alt="guarantees" />
-                <h3>Виконання робіт під ключ</h3>
-              </div>
-            </div>
-            <div>
-              <div className={css.guarantees_block}>
-                <img src={thirdImg} alt="guarantees" />
-                <h3>Монтаж в короткі терміни</h3>
-              </div>
-            </div>
-            <div>
-              <div className={css.guarantees_block}>
-                <img src={fourthImg} alt="guarantees" />
-                <h3>Ціни від виробника</h3>
-              </div>
-            </div>
-            <div>
-              <div className={css.guarantees_block}>
-                <img src={fifthImg} alt="guarantees" />
-                <h3>Безкоштовний замір і консультація</h3>
-              </div>
-            </div>
-            <div>
-              <div className={css.guarantees_block}>
-                <img src={sixthImg} alt="guarantees" />
-                <h3>Тепло і затишок на балконі</h3>
-              </div>
-            </div>
+
+          <div className={css.guarantees_block}>
+            <img src={secondImg} alt="guarantees" />
+            <h3>Виконання робіт під ключ</h3>
+          </div>
+
+          <div className={css.guarantees_block}>
+            <img src={thirdImg} alt="guarantees" />
+            <h3>Монтаж в короткі терміни</h3>
+          </div>
+
+          <div className={css.guarantees_block}>
+            <img src={fourthImg} alt="guarantees" />
+            <h3>Ціни від виробника</h3>
+          </div>
+
+          <div className={css.guarantees_block}>
+            <img src={fifthImg} alt="guarantees" />
+            <h3>Безкоштовний замір і консультація</h3>
+          </div>
+
+          <div className={css.guarantees_block}>
+            <img src={sixthImg} alt="guarantees" />
+            <h3>Тепло і затишок на балконі</h3>
           </div>
         </div>
       </section>
