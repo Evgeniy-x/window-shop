@@ -71,9 +71,9 @@ export const Header = () => {
               <img src={phoneImg} alt="phone" />
               +38 099-989-11-00
             </a>
-            <a onClick={openModal} className={css.phone_link} href="#">
+            <button onClick={openModal} className={css.contact_button} href="#">
               Замовити дзвінок
-            </a>
+            </button>
           </div>
         </div>
       </header>
@@ -85,7 +85,7 @@ export const Header = () => {
         className={css.modal_callBack}
         overlayClassName={css.modal_overlay}
       >
-        <h2 className={css.modal_header}>Замовлення зворотного дзвінка</h2>
+        <h2 className={css.modal_title}>Замовлення зворотного дзвінка</h2>
         <form onSubmit={handleSubmit} className={css.modal_form}>
           <label htmlFor="name">
             <input
@@ -103,7 +103,7 @@ export const Header = () => {
               value={phoneNumber}
               onChange={handlePhoneNumberChange}
               className={css.form_input}
-              placeholder="+38"
+              placeholder="Номер телефону"
               id="phone"
             />
           </label>
