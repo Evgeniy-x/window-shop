@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/window-shop/static/css/main.fa4aadc8.css",
+    "main.js": "/window-shop/static/js/main.11e66a61.js",
+    "static/media/3.png": "/window-shop/static/media/3.736736bce6184ffa3270.png",
+    "static/media/background.png": "/window-shop/static/media/background.e738328b2f2e7682345f.png",
+    "static/media/7.png": "/window-shop/static/media/7.989dff05fae318566dfc.png",
+    "static/media/5.png": "/window-shop/static/media/5.8e14f00c7d270ac81a49.png",
+    "static/media/1.png": "/window-shop/static/media/1.acee3a1b6f36c60a90db.png",
+    "static/media/2.png": "/window-shop/static/media/2.0e1436b44ccfa9b31574.png",
+    "static/media/8.png": "/window-shop/static/media/8.e77fece619cdf8bfc381.png",
+    "static/media/6.png": "/window-shop/static/media/6.b02cfa7b3b2668dbc21c.png",
+    "static/media/4.png": "/window-shop/static/media/4.ac7c3c302dd46aeae29b.png",
+    "index.html": "/window-shop/index.html",
+    "main.fa4aadc8.css.map": "/window-shop/static/css/main.fa4aadc8.css.map",
+    "main.11e66a61.js.map": "/window-shop/static/js/main.11e66a61.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa4aadc8.css",
+    "static/js/main.11e66a61.js"
+  ]
+}
