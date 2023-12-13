@@ -1,5 +1,4 @@
 import css from './Guarantees.module.css';
-import headerImg from '../../assets/images/guarantees/header_sub.png';
 import firstImg from '../../assets/images/guarantees/1.png';
 import secondImg from '../../assets/images/guarantees/2.png';
 import thirdImg from '../../assets/images/guarantees/3.png';
