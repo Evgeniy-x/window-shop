@@ -1,4 +1,6 @@
-// import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import Modal from 'react-modal';
+
 import css from './OurWorks.module.css';
 import firstImg from '../../assets/images/our_works/1.png';
 import secondImg from '../../assets/images/our_works/2.png';
@@ -19,6 +21,17 @@ import big_seventhImg from '../../assets/images/our_works/big_img/7.png';
 import big_eighthImg from '../../assets/images/our_works/big_img/8.png';
 
 export const OurWorks = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
+
+  const openModal = imageUrl => {
+    setSelectedImage(imageUrl);
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
   return (
     <>
       <section className={css.container}>
@@ -26,14 +39,10 @@ export const OurWorks = () => {
 
         <div className={css.works}>
           <div>
-            <a href={big_firstImg}>
-              <img className={css.preview} src={firstImg} alt="window" />
-            </a>
+            <img className={css.preview} src={firstImg} alt="window" />
           </div>
           <div>
-            <a href={big_secondImg}>
-              <img className={css.preview} src={secondImg} alt="window" />
-            </a>
+            <img className={css.preview} src={secondImg} alt="window" />
           </div>
           <div>
             <a href={big_thirdImg}>
@@ -66,6 +75,15 @@ export const OurWorks = () => {
             </a>
           </div>
         </div>
+
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          contentLabel="Image Modal"
+        >
+          <img src={selectedImage} alt="enlarged" />
+          <button onClick={closeModal}>Close</button>
+        </Modal>
       </section>
     </>
   );
