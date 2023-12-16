@@ -1,7 +1,12 @@
+.guarantees {
+  background-color: #0089cd;
+}
+
 .container {
   text-align: center;
+  width: 1200px;
+  margin: 0 auto;
   padding: 60px 20px;
-  background-color: #0089cd;
 }
 
 .guarantees_title {
@@ -9,7 +14,7 @@
   font-size: 30px;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .guarantees_title::after {
@@ -32,18 +37,18 @@
 .guarantees_list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   row-gap: 20px;
 }
 
 .guarantees_block {
-  width: 400px;
-  /* border: red solid 2px; */
+  width: 380px;
   transition: transform 0.3s ease-in-out;
 }
 
 .guarantees_block img {
   height: 50px;
+  margin: 0 auto;
 }
 
 .guarantees_block:hover {
@@ -54,5 +59,6 @@
   font-size: 16px;
   color: #fff;
   width: 170px;
+  margin: 0 auto;
   margin-top: 10px;
 }

@@ -29,78 +29,80 @@ export const Hero = () => {
   };
   return (
     <>
-      <section className={css.container}>
-        <div>
-          <h1 className={css.title}>
-            Скління балконів "під ключ" від 15 000 гривень!
-          </h1>
+      <section className={css.hero}>
+        <div className={css.container}>
           <div>
-            <div className={css.advantages}>
-              <div className={css.advantages_block}>
-                <img
-                  className={css.advantages_img}
-                  src={quality}
-                  alt="quality"
-                />
-                <p className={css.advantages_text}>Висока якість</p>
-              </div>
+            <h1 className={css.title}>
+              Скління балконів "під ключ" від 15 000 гривень!
+            </h1>
+            <div>
+              <div className={css.advantages}>
+                <div className={css.advantages_block}>
+                  <img
+                    className={css.advantages_img}
+                    src={quality}
+                    alt="quality"
+                  />
+                  <p className={css.advantages_text}>Висока якість</p>
+                </div>
 
-              <div className={css.advantages_block}>
-                <img className={css.advantages_img} src={time} alt="time" />
-                <p className={css.advantages_text}>Швидкий монтаж</p>
-              </div>
+                <div className={css.advantages_block}>
+                  <img className={css.advantages_img} src={time} alt="time" />
+                  <p className={css.advantages_text}>Швидкий монтаж</p>
+                </div>
 
-              <div className={css.advantages_block}>
-                <img
-                  className={css.advantages_img}
-                  src={guaranty}
-                  alt="guaranty"
-                />
-                <p className={css.advantages_text}>Гарантія 3 роки</p>
-              </div>
+                <div className={css.advantages_block}>
+                  <img
+                    className={css.advantages_img}
+                    src={guaranty}
+                    alt="guaranty"
+                  />
+                  <p className={css.advantages_text}>Гарантія 3 роки</p>
+                </div>
 
-              <div className={css.advantages_block}>
-                <img
-                  className={css.advantages_img}
-                  src={delivery}
-                  alt="delivery"
-                />
-                <p className={css.advantages_text}>Вивіз сміття</p>
+                <div className={css.advantages_block}>
+                  <img
+                    className={css.advantages_img}
+                    src={delivery}
+                    alt="delivery"
+                  />
+                  <p className={css.advantages_text}>Вивіз сміття</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div>
-          <form onSubmit={handleSubmit} className={css.modal_form}>
-            <p className={css.modal_title}>
-              Запишіться сьогодні на БЕЗКОШТОВНИЙ замір
-            </p>
-            <label htmlFor="name">
-              <input
-                type="text"
-                value={name}
-                onChange={handleNameChange}
-                className={css.form_input}
-                placeholder="Введіть ваше ім'я"
-                id="name"
-              />
-            </label>
-            <label htmlFor="phone">
-              <input
-                type="tel"
-                value={phoneNumber}
-                onChange={handlePhoneNumberChange}
-                className={css.form_input}
-                placeholder="Введіть номер телефону"
-                id="phone"
-              />
-            </label>
-            <button className={css.form_button} type="submit">
-              ВИКЛИКАТИ ЗАМІРНИКА!
-            </button>
-            <p className={css.modal_security}>Ваші дані конфіденційні</p>
-          </form>
+          <div>
+            <form onSubmit={handleSubmit} className={css.modal_form}>
+              <p className={css.modal_title}>
+                Запишіться сьогодні на БЕЗКОШТОВНИЙ замір
+              </p>
+              <label htmlFor="name">
+                <input
+                  type="text"
+                  value={name}
+                  onChange={handleNameChange}
+                  className={css.form_input}
+                  placeholder="Введіть ваше ім'я"
+                  id="name"
+                />
+              </label>
+              <label htmlFor="phone">
+                <input
+                  type="tel"
+                  value={phoneNumber}
+                  onChange={handlePhoneNumberChange}
+                  className={css.form_input}
+                  placeholder="Введіть номер телефону"
+                  id="phone"
+                />
+              </label>
+              <button className={css.form_button} type="submit">
+                ВИКЛИКАТИ ЗАМІРНИКА!
+              </button>
+              <p className={css.modal_security}>Ваші дані конфіденційні</p>
+            </form>
+          </div>
         </div>
       </section>
     </>

@@ -1,10 +1,15 @@
-.container {
-  display: flex;
-  justify-content: space-around;
-  text-align: center;
-  padding: 100px 20px 60px 20px;
+.hero {
   background: #ffffff url(../../assets/images/hero/background.png) 0 0 no-repeat;
   background-size: cover;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 60px 20px;
 }
 
 .title {
