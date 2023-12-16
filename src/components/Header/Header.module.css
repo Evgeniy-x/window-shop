@@ -92,6 +92,7 @@
 }
 
 .contact_phone img {
+  display: inline;
   margin-right: 10px;
 }
 
