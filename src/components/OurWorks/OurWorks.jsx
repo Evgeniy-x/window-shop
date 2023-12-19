@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import Modal from 'react-modal';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 import css from './OurWorks.module.css';
 import firstImg from '../../assets/images/our_works/1.png';
@@ -21,16 +22,46 @@ import big_seventhImg from '../../assets/images/our_works/big_img/7.png';
 import big_eighthImg from '../../assets/images/our_works/big_img/8.png';
 
 export const OurWorks = () => {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState('');
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
 
-  const openModal = imageUrl => {
-    setSelectedImage(imageUrl);
-    setModalIsOpen(true);
+  const images = [
+    firstImg,
+    secondImg,
+    thirdImg,
+    fourthImg,
+    fifthImg,
+    sixthImg,
+    seventhImg,
+    eighthImg,
+  ];
+
+  const bigImages = [
+    big_firstImg,
+    big_secondImg,
+    big_thirdImg,
+    big_fourthImg,
+    big_fifthImg,
+    big_sixthImg,
+    big_seventhImg,
+    big_eighthImg,
+  ];
+
+  const openLightbox = index => {
+    setPhotoIndex(index);
+    setLightboxOpen(true);
   };
 
-  const closeModal = () => {
-    setModalIsOpen(false);
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const navigateNext = () => {
+    setPhotoIndex((photoIndex + 1) % images.length);
+  };
+
+  const navigatePrev = () => {
+    setPhotoIndex((photoIndex + images.length - 1) % images.length);
   };
   return (
     <>
@@ -38,52 +69,27 @@ export const OurWorks = () => {
         <h2 className={css.works_header}>Наші роботи</h2>
 
         <div className={css.works}>
-          <div>
-            <img className={css.preview} src={firstImg} alt="window" />
-          </div>
-          <div>
-            <img className={css.preview} src={secondImg} alt="window" />
-          </div>
-          <div>
-            <a href={big_thirdImg}>
-              <img className={css.preview} src={thirdImg} alt="window" />
-            </a>
-          </div>
-          <div>
-            <a href={big_fourthImg}>
-              <img className={css.preview} src={fourthImg} alt="window" />
-            </a>
-          </div>
-          <div>
-            <a href={big_fifthImg}>
-              <img className={css.preview} src={fifthImg} alt="window" />
-            </a>
-          </div>
-          <div>
-            <a href={big_sixthImg}>
-              <img className={css.preview} src={sixthImg} alt="window" />
-            </a>
-          </div>
-          <div>
-            <a href={big_seventhImg}>
-              <img className={css.preview} src={seventhImg} alt="window" />
-            </a>
-          </div>
-          <div>
-            <a href={big_eighthImg}>
-              <img className={css.preview} src={eighthImg} alt="window" />
-            </a>
-          </div>
-        </div>
+          {images.map((img, index) => (
+            <div key={index} onClick={() => openLightbox(index)}>
+              <img
+                className={css.preview}
+                src={img}
+                alt={`window ${index + 1}`}
+              />
+            </div>
+          ))}
 
-        <Modal
-          isOpen={modalIsOpen}
-          onRequestClose={closeModal}
-          contentLabel="Image Modal"
-        >
-          <img src={selectedImage} alt="enlarged" />
-          <button onClick={closeModal}>Close</button>
-        </Modal>
+          {lightboxOpen && (
+            <Lightbox
+              mainSrc={bigImages[photoIndex]}
+              nextSrc={images[(photoIndex + 1) % images.length]}
+              prevSrc={images[(photoIndex + images.length - 1) % images.length]}
+              onCloseRequest={closeLightbox}
+              onMovePrevRequest={navigatePrev}
+              onMoveNextRequest={navigateNext}
+            />
+          )}
+        </div>
       </section>
     </>
   );
