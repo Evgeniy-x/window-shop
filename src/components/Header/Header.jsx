@@ -54,7 +54,7 @@ export const Header = () => {
           </div>
 
           <div className={css.header_btn}>
-            <button className={css.button}>
+            <button onClick={openModal} className={css.button}>
               Викликати <br /> замірника
             </button>
           </div>
