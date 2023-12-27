@@ -3,3 +3,21 @@
   margin: 0 auto;
   padding: 40px 20px;
 }
+
+.aluminum_title {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.aluminum_text {
+  font-size: 20px;
+  text-indent: 30px;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.aluminum_img {
+  margin: auto;
+  margin-bottom: 30px;
+}
