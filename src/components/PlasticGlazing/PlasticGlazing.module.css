@@ -1,0 +1,22 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+.plastic_title {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.plastic_text {
+  font-size: 20px;
+  text-indent: 30px;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+.plastic_img {
+  margin: auto;
+  margin-bottom: 30px;
+}

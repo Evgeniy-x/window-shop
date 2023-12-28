@@ -4,7 +4,7 @@ import aluminum from '../../assets/images/aluminum_glazing/aluminum.png';
 export const AluminumGlazing = () => {
   return (
     <section className={css.container}>
-      <h2 className={css.aluminum_title}>Aluminum Glazing </h2>
+      <h2 className={css.aluminum_title}>Алюмінієве скління </h2>
       <p className={css.aluminum_text}>
         Шукаєте краше рішення для оскління котеджу, тераси, кафе чи вітрини?
         Встановлюйте вікна з алмінієвого профілю, Вони більш довговічні,
