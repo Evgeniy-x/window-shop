@@ -1,8 +1,8 @@
 import css from './WoodenGlazing.module.css';
-import sosna from '../../assets/images/wooden_glazing/sosna.png';
-import dub from '../../assets/images/wooden_glazing/dub.png';
-import derevo_aluminiy from '../../assets/images/wooden_glazing/derevo_aluminiy.png';
-import meranti from '../../assets/images/wooden_glazing/meranti.png';
+import sosna from '../../assets/images/page/wooden_glazing/sosna.png';
+import dub from '../../assets/images/page/wooden_glazing/dub.png';
+import derevo_aluminiy from '../../assets/images/page/wooden_glazing/derevo_aluminiy.png';
+import meranti from '../../assets/images/page/wooden_glazing/meranti.png';
 
 export const WoodenGlazing = () => {
   return (

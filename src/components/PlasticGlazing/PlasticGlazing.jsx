@@ -1,5 +1,5 @@
 import css from './PlasticGlazing.module.css';
-import plastic from '../../assets/images/plastic_glazing/plastic_window.png';
+import plastic from '../../assets/images/page/plastic_glazing/plastic_window.png';
 
 export const PlasticGlazing = () => {
   return (

@@ -1,5 +1,5 @@
 import css from './AluminumGlazing.module.css';
-import aluminum from '../../assets/images/aluminum_glazing/aluminum.png';
+import aluminum from '../../assets/images/page/aluminum_glazing/aluminum.png';
 
 export const AluminumGlazing = () => {
   return (
