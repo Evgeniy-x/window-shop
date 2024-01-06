@@ -21,3 +21,19 @@
   margin: auto;
   margin-bottom: 30px;
 }
+
+.french_title_list {
+  font-size: 26px;
+  margin-left: 50px;
+}
+
+.french_list {
+  font-size: 20px;
+  text-indent: 30px;
+  text-align: justify;
+  padding-inline-start: 20px;
+}
+
+.french_list_item {
+  margin-bottom: 5px;
+}
