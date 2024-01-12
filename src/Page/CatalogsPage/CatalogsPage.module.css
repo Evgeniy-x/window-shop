@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+}
+
+.categories {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.categories ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.categories li {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+}
+
+.categories li.active {
+  background-color: #ddd;
+}
+
+.products {
+  display: inline-block;
+  text-align: left;
+}
+
+.products ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.products li {
+  margin: 10px 0;
+}
