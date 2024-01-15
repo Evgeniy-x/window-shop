@@ -5,6 +5,9 @@ import { useState } from 'react';
 import clockImg from '../../assets/images/header/clock.png';
 import phoneImg from '../../assets/images/header/phone.png';
 
+// require('dotenv').config();
+// const { Telegram_API } = process.env;
+
 Modal.setAppElement('#root');
 
 export const Header = () => {
@@ -28,6 +31,9 @@ export const Header = () => {
     setPhoneNumber(e.target.value);
   };
 
+  // const telegramAPI = process.env.REACT_APP_Telegram_API;
+  // console.log(telegramAPI);
+
   const handleSubmit = async e => {
     e.preventDefault();
     // Тут можна реалізувати логіку для відправлення замовлення зворотного дзвінка
@@ -36,7 +42,7 @@ export const Header = () => {
 
     const telegramApiUrl = `https://api.telegram.org/bot${telegramAPI}/sendMessage`;
 
-    const textMessage = `Ім'я: ${name}\nНомер телефону: ${phoneNumber}`;
+    const text = `Ім'я: ${name}\nНомер телефону: ${phoneNumber}`;
 
     await fetch(telegramApiUrl, {
       method: 'POST',
@@ -45,7 +51,7 @@ export const Header = () => {
       },
       body: JSON.stringify({
         chat_id: chatID,
-        textMessage,
+        text,
       }),
     });
 
