@@ -28,9 +28,27 @@ export const Header = () => {
     setPhoneNumber(e.target.value);
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault();
     // Тут можна реалізувати логіку для відправлення замовлення зворотного дзвінка
+    const telegramAPI = process.env.Telegram_API;
+    const chatID = process.env.chat_ID;
+
+    const telegramApiUrl = `https://api.telegram.org/bot${telegramAPI}/sendMessage`;
+
+    const textMessage = `Ім'я: ${name}\nНомер телефону: ${phoneNumber}`;
+
+    await fetch(telegramApiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        chat_id: chatID,
+        textMessage,
+      }),
+    });
+
     console.log('Замовлення зворотного дзвінка:', {
       name,
       phoneNumber,
