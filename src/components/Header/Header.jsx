@@ -13,7 +13,6 @@ export const Header = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [nameIsValid, setNameIsValid] = useState(false);
   const [phoneIsValid, setPhoneIsValid] = useState(false);
-  const [isButtonActive, setButtonActive] = useState(false);
 
   const openModal = () => {
     setModalIsOpen(true);
