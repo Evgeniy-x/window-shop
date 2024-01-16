@@ -13,6 +13,7 @@ export const Header = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [nameIsValid, setNameIsValid] = useState(false);
   const [phoneIsValid, setPhoneIsValid] = useState(false);
+  const [isButtonActive, setButtonActive] = useState(false);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -33,16 +34,16 @@ export const Header = () => {
   };
 
   const validateName = value =>
-    /^[a-zA-Z   ]+$/.test(value) && value.length <= 20;
+    /^[a-zA-Zа-яА-я ]+$/.test(value) && value.length >= 3 && value.length <= 20;
 
   const validatePhoneNumber = value =>
-    /^[0-9 -]+$/.test(value) && value.length <= 16;
+    /^[0-9 -]+$/.test(value) && value.length >= 9 && value.length <= 16;
 
   const handleSubmit = e => {
     e.preventDefault();
     // Тут можна реалізувати логіку для відправлення замовлення зворотного дзвінка
 
-    const text = `Ім'я: ${name}\nНомер телефону: ${phoneNumber}`;
+    const text = `Ім'я: ${name}\nТелефон: ${phoneNumber}`;
     telegramSend(text);
     setName('');
     setPhoneNumber('');

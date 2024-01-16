@@ -164,12 +164,6 @@
   text-align: center;
 }
 
-.form_input:focus {
-  border-color: #0089cd;
-  box-shadow: 0 4px 8px rgba(0, 137, 205, 0.2);
-  outline: none;
-}
-
 .form_button {
   width: 280px;
   height: 60px;
@@ -201,12 +195,11 @@
 }
 
 .valid {
-  border: 1px solid greenyellow;
+  border: 1px solid rgb(173, 255, 47);
 }
 
-.form_input:focus .valid {
-  border-color: green;
-  box-shadow: none;
+.valid:focus {
+  box-shadow: 0 4px 8px rgba(173, 255, 47, 0.2);
   outline: none;
 }
 
@@ -214,7 +207,8 @@
   border: 1px solid red;
 }
 
-.form_input:focus .invalid {
-  box-shadow: none;
+.invalid:focus {
+  border-color: rgba(255, 0, 0, 0.324);
+  box-shadow: 0 4px 8px rgba(250, 10, 10, 0.2);
   outline: none;
 }
