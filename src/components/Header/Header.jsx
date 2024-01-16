@@ -11,6 +11,8 @@ export const Header = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [nameIsValid, setNameIsValid] = useState(false);
+  const [phoneIsValid, setPhoneIsValid] = useState(false);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -22,11 +24,19 @@ export const Header = () => {
 
   const handleNameChange = e => {
     setName(e.target.value);
+    setNameIsValid(validateName(e.target.value));
   };
 
   const handlePhoneNumberChange = e => {
     setPhoneNumber(e.target.value);
+    setPhoneIsValid(validatePhoneNumber(e.target.value));
   };
+
+  const validateName = value =>
+    /^[a-zA-Z   ]+$/.test(value) && value.length <= 20;
+
+  const validatePhoneNumber = value =>
+    /^[0-9 -]+$/.test(value) && value.length <= 16;
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -91,7 +101,9 @@ export const Header = () => {
               type="text"
               value={name}
               onChange={handleNameChange}
-              className={css.form_input}
+              className={`${css.form_input} ${
+                nameIsValid ? css.valid : css.invalid
+              }`}
               placeholder="Ваше ім'я"
               id="name"
             />
@@ -101,12 +113,18 @@ export const Header = () => {
               type="tel"
               value={phoneNumber}
               onChange={handlePhoneNumberChange}
-              className={css.form_input}
+              className={`${css.form_input} ${
+                phoneIsValid ? css.valid : css.invalid
+              }`}
               placeholder="Номер телефону"
               id="phone"
             />
           </label>
-          <button className={css.form_button} type="submit">
+          <button
+            className={css.form_button}
+            type="submit"
+            disabled={!nameIsValid || !phoneIsValid}
+          >
             Замовити дзвінок
           </button>
         </form>

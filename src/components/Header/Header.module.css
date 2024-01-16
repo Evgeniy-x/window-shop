@@ -199,3 +199,22 @@
   color: #ffffff;
   background-color: #708696;
 }
+
+.valid {
+  border: 1px solid greenyellow;
+}
+
+.form_input:focus .valid {
+  border-color: green;
+  box-shadow: none;
+  outline: none;
+}
+
+.invalid {
+  border: 1px solid red;
+}
+
+.form_input:focus .invalid {
+  box-shadow: none;
+  outline: none;
+}

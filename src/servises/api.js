@@ -4,16 +4,26 @@ const chatID = process.env.REACT_APP_Chat_ID;
 const telegramUrl = `https://api.telegram.org/bot${telegramAPI}/sendMessage`;
 
 const telegramSend = async text => {
-  await fetch(telegramUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      chat_id: chatID,
-      text,
-    }),
-  });
+  try {
+    const response = await fetch(telegramUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        chat_id: chatID,
+        text,
+      }),
+    });
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+  } catch (error) {
+    console.error(
+      'Помилка при відправці повідомлення до Telegram:',
+      error.message
+    );
+  }
 };
 
 export { telegramSend };
