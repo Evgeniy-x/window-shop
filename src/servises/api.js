@@ -15,6 +15,9 @@ const telegramSend = async text => {
         text,
       }),
     });
+    if (response.ok) {
+    }
+
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }

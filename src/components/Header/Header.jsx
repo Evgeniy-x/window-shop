@@ -1,3 +1,5 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import css from './Header.module.css';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
@@ -40,12 +42,15 @@ export const Header = () => {
   const validatePhoneNumber = value =>
     /^[0-9 -+]+$/.test(value) && value.length >= 9 && value.length <= 16;
 
+  const notify = () => toast('Номер відправлено!');
+
   const handleSubmit = e => {
     e.preventDefault();
     // Тут можна реалізувати логіку для відправлення замовлення зворотного дзвінка
 
     const text = `Ім'я: ${name}\nТелефон: ${phoneNumber}`;
     telegramSend(text);
+    notify();
     setName('');
     setPhoneNumber('');
     closeModal();
@@ -134,6 +139,8 @@ export const Header = () => {
           Закрити
         </button>
       </Modal>
+
+      <ToastContainer />
     </>
   );
 };
