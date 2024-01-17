@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/window-shop/static/css/main.ac2181c6.css",
-    "main.js": "/window-shop/static/js/main.e3110a76.js",
+    "main.css": "/window-shop/static/css/main.a3c1f4af.css",
+    "main.js": "/window-shop/static/js/main.4f9ed6b1.js",
     "static/media/3.png": "/window-shop/static/media/3.736736bce6184ffa3270.png",
     "static/media/background.png": "/window-shop/static/media/background.e738328b2f2e7682345f.png",
     "static/media/7.png": "/window-shop/static/media/7.989dff05fae318566dfc.png",
@@ -15,11 +15,11 @@
     "static/media/french_window.png": "/window-shop/static/media/french_window.31584b416eabdc152b15.png",
     "static/media/aluminum.png": "/window-shop/static/media/aluminum.51997319ef1be6a354f5.png",
     "index.html": "/window-shop/index.html",
-    "main.ac2181c6.css.map": "/window-shop/static/css/main.ac2181c6.css.map",
-    "main.e3110a76.js.map": "/window-shop/static/js/main.e3110a76.js.map"
+    "main.a3c1f4af.css.map": "/window-shop/static/css/main.a3c1f4af.css.map",
+    "main.4f9ed6b1.js.map": "/window-shop/static/js/main.4f9ed6b1.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac2181c6.css",
-    "static/js/main.e3110a76.js"
+    "static/css/main.a3c1f4af.css",
+    "static/js/main.4f9ed6b1.js"
   ]
 }
