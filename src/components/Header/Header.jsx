@@ -15,6 +15,7 @@ export const Header = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [nameIsValid, setNameIsValid] = useState(false);
   const [phoneIsValid, setPhoneIsValid] = useState(false);
+  const [isButtonActive, setIsButtonActive] = useState(false);
 
   const openModal = () => {
     setModalIsOpen(true);
@@ -27,11 +28,17 @@ export const Header = () => {
   const handleNameChange = e => {
     setName(e.target.value);
     setNameIsValid(validateName(e.target.value));
+    setIsButtonActive(
+      validateName(e.target.value) && validatePhoneNumber(phoneNumber)
+    );
   };
 
   const handlePhoneNumberChange = e => {
     setPhoneNumber(e.target.value);
     setPhoneIsValid(validatePhoneNumber(e.target.value));
+    setIsButtonActive(
+      validateName(name) && validatePhoneNumber(e.target.value)
+    );
   };
 
   const validateName = value =>
@@ -42,17 +49,16 @@ export const Header = () => {
   const validatePhoneNumber = value =>
     /^[0-9 -+]+$/.test(value) && value.length >= 9 && value.length <= 16;
 
-  const notify = () => toast.success('Номер відправлено!');
-
   const handleSubmit = e => {
     e.preventDefault();
     // Тут можна реалізувати логіку для відправлення замовлення зворотного дзвінка
 
     const text = `Ім'я: ${name}\nТелефон: ${phoneNumber}`;
     telegramSend(text);
-    notify();
+    toast.success("Номер відправлено! \nЗ вами зв'яжуться");
     setName('');
     setPhoneNumber('');
+    setIsButtonActive(false);
     closeModal();
   };
 
@@ -130,7 +136,7 @@ export const Header = () => {
           <button
             className={css.form_button}
             type="submit"
-            disabled={!nameIsValid || !phoneIsValid}
+            disabled={!isButtonActive}
           >
             Замовити дзвінок
           </button>
