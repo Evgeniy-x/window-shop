@@ -42,7 +42,7 @@ export const Header = () => {
   const validatePhoneNumber = value =>
     /^[0-9 -+]+$/.test(value) && value.length >= 9 && value.length <= 16;
 
-  const notify = () => toast('Номер відправлено!');
+  const notify = () => toast.success('Номер відправлено!');
 
   const handleSubmit = e => {
     e.preventDefault();
