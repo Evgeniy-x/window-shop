@@ -1,5 +1,5 @@
-// import { ToastContainer, toast } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const telegramAPI = process.env.REACT_APP_Telegram_API;
 const chatID = process.env.REACT_APP_Chat_ID;
@@ -25,6 +25,7 @@ const telegramSend = async text => {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
   } catch (error) {
+    toast.error('Помилка віправлення');
     console.error(
       'Помилка при відправці повідомлення до Telegram:',
       error.message
