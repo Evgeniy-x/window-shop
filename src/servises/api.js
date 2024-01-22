@@ -19,6 +19,7 @@ const telegramSend = async text => {
       }),
     });
     if (response.ok) {
+      toast.success("Номер відправлено! \nЗ вами зв'яжуться");
     }
 
     if (!response.ok) {

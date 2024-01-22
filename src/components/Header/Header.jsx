@@ -1,4 +1,4 @@
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import css from './Header.module.css';
 import { Link } from 'react-router-dom';
@@ -55,7 +55,6 @@ export const Header = () => {
 
     const text = `Ім'я: ${name}\nТелефон: ${phoneNumber}`;
     telegramSend(text);
-    toast.success("Номер відправлено! \nЗ вами зв'яжуться");
     setName('');
     setPhoneNumber('');
     setIsButtonActive(false);
@@ -81,7 +80,7 @@ export const Header = () => {
             </button>
           </div>
 
-          <div className={css.working_hours}>
+          <div className={css.working_block}>
             <img className={css.working_img} src={clockImg} alt="clock" />
             <p className={css.working_text}>
               без вихідних <span>9:00 - 18:00</span>

@@ -4,19 +4,16 @@
 }
 
 .container {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 1200px;
+  align-items: center; */
+  width: 428px;
   margin: 0 auto;
   padding: 10px 20px;
 }
 
-/* Логотип */
 .logo_block {
-  display: flex;
-  row-gap: 10px;
-  width: 450px;
+  width: 250px;
 }
 
 .logo_link {
@@ -34,7 +31,7 @@
 
 .logo_text {
   margin: 0 auto;
-  margin-left: 20px;
+  margin-top: 10px;
   font-size: 16px;
   font-weight: 500;
   color: #708696;
@@ -43,8 +40,10 @@
 .button {
   background: url(../../assets/images/header/edit.png) 10px center no-repeat;
   color: #45a049;
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: 14px;
   font-weight: 700;
+  margin-top: 10px;
   padding: 10px 20px;
   padding-left: 60px;
   border: 2px solid #55a831;
@@ -58,9 +57,10 @@
   border: 2px solid #0089cd;
 }
 
-.working_hours {
+.working_block {
   display: flex;
   align-items: center;
+  margin-top: 10px;
 }
 
 .working_text {
@@ -77,7 +77,11 @@
   color: #4caf50;
 }
 
-/* Контакти */
+/* 
+
+
+
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -107,7 +111,6 @@
   background-color: #fff;
 }
 
-/* Модальне вікно */
 
 .modal_callBack {
   position: absolute;
@@ -133,7 +136,6 @@
   justify-content: center;
 }
 
-/* Заголовок модального вікна */
 .modal_title {
   font-size: 24px;
   font-weight: 700;
@@ -176,7 +178,7 @@
   cursor: pointer;
 }
 
-/* Стилі для кнопки закриття модального вікна */
+
 .modal_close {
   background-color: initial;
   color: #555;
@@ -188,7 +190,7 @@
   margin-top: 20px;
 }
 
-/* Стилі для кнопки закриття модального вікна при наведенні курсору */
+/* Стилі для кнопки закриття модального вікна при наведенні курсору 
 .modal_close:hover {
   color: #ffffff;
   background-color: #708696;
@@ -211,4 +213,4 @@
   border-color: rgba(255, 0, 0, 0.324);
   box-shadow: 0 4px 8px rgba(250, 10, 10, 0.2);
   outline: none;
-}
+} */
