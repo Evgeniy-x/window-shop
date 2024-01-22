@@ -74,27 +74,33 @@ export const Header = () => {
             </p>
           </div>
 
-          <div className={css.header_btn}>
-            <button onClick={openModal} className={css.button}>
+          <div>
+            <button onClick={openModal} className={css.header_btn}>
               Викликати <br /> замірника
             </button>
           </div>
 
-          <div className={css.working_block}>
-            <img className={css.working_img} src={clockImg} alt="clock" />
-            <p className={css.working_text}>
-              без вихідних <span>9:00 - 18:00</span>
-            </p>
-          </div>
+          <div className={css.info_block}>
+            <div className={css.working_block}>
+              <img className={css.working_img} src={clockImg} alt="clock" />
+              <p className={css.working_text}>
+                без вихідних <span>9:00 - 18:00</span>
+              </p>
+            </div>
 
-          <div className={css.contact_block}>
-            <a href="tel:+380999891100" className={css.contact_phone}>
-              <img src={phoneImg} alt="phone" />
-              +38 099-989-11-00
-            </a>
-            <button onClick={openModal} className={css.contact_button} href="#">
-              Замовити дзвінок
-            </button>
+            <div className={css.contact_block}>
+              <a href="tel:+380999891100" className={css.contact_phone}>
+                <img src={phoneImg} alt="phone" />
+                +38 099-989-11-00
+              </a>
+              <button
+                onClick={openModal}
+                className={css.contact_button}
+                href="#"
+              >
+                Замовити дзвінок
+              </button>
+            </div>
           </div>
         </div>
       </header>
