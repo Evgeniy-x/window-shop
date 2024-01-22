@@ -4,16 +4,13 @@
 }
 
 .container {
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
   width: 428px;
   margin: 0 auto;
   padding: 10px 20px;
 }
 
 .logo_block {
-  width: 250px;
+  /* width: 250px; */
 }
 
 .logo_link {
@@ -34,13 +31,13 @@
   margin-top: 10px;
   font-size: 16px;
   font-weight: 500;
+  width: 250px;
   color: #708696;
 }
 
 .button {
   background: url(../../assets/images/header/edit.png) 10px center no-repeat;
   color: #45a049;
-  /* font-size: 16px; */
   font-size: 14px;
   font-weight: 700;
   margin-top: 10px;
@@ -77,19 +74,16 @@
   color: #4caf50;
 }
 
-/* 
-
-
-
-
-.contact {
+.contact_block {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
+  margin-top: 10px;
 }
 
 .contact_phone {
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: 20px;
   font-weight: 700;
   color: inherit;
   text-decoration: none;
@@ -101,16 +95,41 @@
 }
 
 .contact_button {
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: 14px;
   color: #0089cd;
   width: 150px;
-  margin-left: 33px;
+  margin-left: 15px;
   cursor: pointer;
   border: none;
   padding: 0;
   background-color: #fff;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 768px;
+  }
+
+  .logo_block {
+    display: flex;
+    width: 350px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+
+  .working_block {
+    width: 300px;
+  }
+}
+
+/* -- Модальне вікно --  */
 
 .modal_callBack {
   position: absolute;
@@ -178,7 +197,6 @@
   cursor: pointer;
 }
 
-
 .modal_close {
   background-color: initial;
   color: #555;
@@ -190,7 +208,6 @@
   margin-top: 20px;
 }
 
-/* Стилі для кнопки закриття модального вікна при наведенні курсору 
 .modal_close:hover {
   color: #ffffff;
   background-color: #708696;
@@ -213,4 +230,4 @@
   border-color: rgba(255, 0, 0, 0.324);
   box-shadow: 0 4px 8px rgba(250, 10, 10, 0.2);
   outline: none;
-} */
+}
