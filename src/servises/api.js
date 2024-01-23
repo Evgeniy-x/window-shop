@@ -2,7 +2,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 /* Проксі сервіс "CORS Anywhere" для обходу CORS помилки*/
-const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+// const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 
 // const telegramAPI = process.env.REACT_APP_Telegram_API;
 // const chatID = process.env.REACT_APP_Chat_ID;
@@ -13,7 +13,7 @@ const telegramUrl = `https://api.telegram.org/bot${telegramAPI}/sendMessage`;
 
 const telegramSend = async text => {
   try {
-    const response = await fetch(proxyUrl + telegramUrl, {
+    const response = await fetch(telegramUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
