@@ -1,14 +1,19 @@
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const telegramAPI = process.env.REACT_APP_Telegram_API;
-const chatID = process.env.REACT_APP_Chat_ID;
+/* Проксі сервіс "CORS Anywhere" для обходу CORS помилки*/
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+
+// const telegramAPI = process.env.REACT_APP_Telegram_API;
+// const chatID = process.env.REACT_APP_Chat_ID;
+const telegramAPI = '6563904796:AAF3dzjIKZoAE14UOqU-rfzYmmbP_LQ3EXU';
+const chatID = '-1001936748257';
 
 const telegramUrl = `https://api.telegram.org/bot${telegramAPI}/sendMessage`;
 
 const telegramSend = async text => {
   try {
-    const response = await fetch(telegramUrl, {
+    const response = await fetch(proxyUrl + telegramUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
