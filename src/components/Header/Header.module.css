@@ -85,7 +85,6 @@
 }
 
 .contact_phone {
-  /* font-size: 24px; */
   font-size: 20px;
   font-weight: 700;
   color: inherit;
@@ -98,7 +97,6 @@
 }
 
 .contact_button {
-  /* font-size: 18px; */
   font-size: 14px;
   color: #0089cd;
   width: 150px;
@@ -125,10 +123,6 @@
 
   .header_btn {
     font-size: 16px;
-  }
-
-  .info_block {
-    /* display: ; */
   }
 
   .working_block {
@@ -162,6 +156,15 @@
   .info_block {
     display: flex;
     gap: 30px;
+  }
+
+  .contact_phone {
+    font-size: 24px;
+  }
+
+  .contact_button {
+    font-size: 18px;
+    margin-left: 33px;
   }
 }
 

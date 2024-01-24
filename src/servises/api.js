@@ -1,9 +1,6 @@
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-/* Проксі сервіс "CORS Anywhere" для обходу CORS помилки*/
-// const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-
 // const telegramAPI = process.env.REACT_APP_Telegram_API;
 // const chatID = process.env.REACT_APP_Chat_ID;
 const telegramAPI = '6563904796:AAF3dzjIKZoAE14UOqU-rfzYmmbP_LQ3EXU';
