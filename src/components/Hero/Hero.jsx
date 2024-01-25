@@ -31,7 +31,7 @@ export const Hero = () => {
     <>
       <section className={css.hero}>
         <div className={css.container}>
-          <div>
+          <div className={css.info_block}>
             <h1 className={css.title}>
               Скління балконів "під ключ" від 15 000 гривень!
             </h1>
