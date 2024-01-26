@@ -152,6 +152,12 @@
     padding: 100px 20px 60px 20px;
   }
 
+  .advantages {
+    justify-content: start;
+    text-align: center;
+    width: auto;
+  }
+
   .advantages_img {
     width: 100px;
   }
