@@ -9,7 +9,6 @@
   font-size: 22px;
   text-align: center;
   margin: 0 auto;
-  /* font-size: 30px; */
 }
 
 .gatalog_header::after {
@@ -33,6 +32,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  row-gap: 30px;
   margin-top: 60px;
 }
 
@@ -40,8 +40,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 220px;
-  font-size: 20px;
+  width: 180px;
+  font-size: 16px;
   font-weight: 500;
   color: inherit;
   text-align: center;
@@ -61,10 +61,23 @@
   .container {
     width: 768px;
   }
+
+  .gatalog_header {
+    font-size: 26px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     width: 1160px;
+  }
+
+  .gatalog_header {
+    font-size: 30px;
+  }
+
+  .gatalog_link {
+    width: 220px;
+    font-size: 20px;
   }
 }
