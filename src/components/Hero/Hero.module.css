@@ -39,8 +39,7 @@
 }
 
 .advantages_text {
-  /* font-size: 16px; */
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 700;
   color: white;
   position: absolute;
@@ -132,6 +131,10 @@
     margin-top: 60px;
   }
 
+  .advantages_text {
+    font-size: 14px;
+  }
+
   .modal_form {
     width: 400px;
     margin-top: 80px;
@@ -156,6 +159,10 @@
     justify-content: start;
     text-align: center;
     width: auto;
+  }
+
+  .advantages_text {
+    font-size: 16px;
   }
 
   .advantages_img {
