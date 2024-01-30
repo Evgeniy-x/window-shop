@@ -126,13 +126,13 @@
   }
 
   .advantages {
-    width: 400px;
+    width: 450px;
     gap: 40px;
     margin-top: 60px;
   }
 
-  .advantages_text {
-    font-size: 14px;
+  .advantages_img {
+    width: 80px;
   }
 
   .modal_form {
@@ -156,7 +156,7 @@
   }
 
   .advantages {
-    justify-content: start;
+    justify-content: center;
     text-align: center;
     width: auto;
   }

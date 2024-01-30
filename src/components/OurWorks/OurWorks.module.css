@@ -1,12 +1,13 @@
 .container {
-  width: 1200px;
+  width: 428px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
 .works_header {
   position: relative;
-  font-size: 30px;
+  font-size: 24px;
+  /* font-size: 30px; */
   text-align: center;
   margin: 0 auto;
 }
@@ -36,12 +37,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  row-gap: 20px;
+  row-gap: 10px;
   margin-top: 40px;
 }
 
 .preview {
-  max-width: 100%;
+  /* max-width: 100%; */
+  width: 190px;
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
@@ -49,4 +51,33 @@
 
 .preview:hover {
   transform: scale(1.2);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+
+  .works {
+    justify-content: space-evenly;
+    row-gap: 20px;
+  }
+
+  .preview {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1160px;
+  }
+
+  .works {
+    justify-content: space-between;
+  }
+
+  .preview {
+    width: 270px;
+  }
 }
