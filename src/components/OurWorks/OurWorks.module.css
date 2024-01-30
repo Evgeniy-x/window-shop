@@ -7,7 +7,6 @@
 .works_header {
   position: relative;
   font-size: 24px;
-  /* font-size: 30px; */
   text-align: center;
   margin: 0 auto;
 }
@@ -42,7 +41,6 @@
 }
 
 .preview {
-  /* max-width: 100%; */
   width: 190px;
   height: auto;
   cursor: pointer;
@@ -56,6 +54,10 @@
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+  }
+
+  .works_header {
+    font-size: 30px;
   }
 
   .works {
