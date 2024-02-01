@@ -1,5 +1,6 @@
 import css from './Hero.module.css';
 import { useState } from 'react';
+import { telegramSend } from '../../servises/api';
 import quality from '../../assets/images/hero/quality.png';
 import time from '../../assets/images/hero/time.png';
 import guaranty from '../../assets/images/hero/guaranty.png';
@@ -8,24 +9,43 @@ import delivery from '../../assets/images/hero/delivery.png';
 export const Hero = () => {
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
+  const [nameIsValid, setNameIsValid] = useState(false);
+  const [phoneIsValid, setPhoneIsValid] = useState(false);
+  const [isButtonActive, setIsButtonActive] = useState(false);
 
   const handleNameChange = e => {
     setName(e.target.value);
+    setNameIsValid(validateName(e.target.value));
+    setIsButtonActive(
+      validateName(e.target.value) && validatePhoneNumber(phoneNumber)
+    );
   };
 
   const handlePhoneNumberChange = e => {
     setPhoneNumber(e.target.value);
+    setPhoneIsValid(validatePhoneNumber(e.target.value));
+    setIsButtonActive(
+      validateName(name) && validatePhoneNumber(e.target.value)
+    );
   };
+
+  const validateName = value =>
+    /^[a-zA-Zа-яА-яІіЇїЄє ]+$/u.test(value) &&
+    value.length >= 3 &&
+    value.length <= 30;
+
+  const validatePhoneNumber = value =>
+    /^[0-9 -+]+$/.test(value) && value.length >= 9 && value.length <= 16;
 
   const handleSubmit = e => {
     e.preventDefault();
     // Тут можна реалізувати логіку для відправлення замовлення зворотного дзвінка
-    console.log('Замовлення зворотного дзвінка:', {
-      name,
-      phoneNumber,
-    });
+
+    const text = `Ім'я: ${name}\nТелефон: ${phoneNumber}`;
+    telegramSend(text);
     setName('');
     setPhoneNumber('');
+    setIsButtonActive(false);
   };
   return (
     <>
@@ -80,7 +100,9 @@ export const Hero = () => {
                 type="text"
                 value={name}
                 onChange={handleNameChange}
-                className={css.form_input}
+                className={`${css.form_input} ${
+                  nameIsValid ? css.valid : css.invalid
+                }`}
                 placeholder="Введіть ваше ім'я"
                 id="name"
               />
@@ -90,12 +112,18 @@ export const Hero = () => {
                 type="tel"
                 value={phoneNumber}
                 onChange={handlePhoneNumberChange}
-                className={css.form_input}
+                className={`${css.form_input} ${
+                  nameIsValid ? css.valid : css.invalid
+                }`}
                 placeholder="Введіть номер телефону"
                 id="phone"
               />
             </label>
-            <button className={css.form_button} type="submit">
+            <button
+              className={css.form_button}
+              type="submit"
+              disabled={!isButtonActive}
+            >
               ВИКЛИКАТИ ЗАМІРНИКА!
             </button>
             <p className={css.modal_security}>Ваші дані конфіденційні</p>
