@@ -14,7 +14,7 @@
 }
 
 .logo_link {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   color: #fff;
 }
@@ -40,6 +40,12 @@
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
+  }
+
+  .logo_link {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
   }
 }
 
