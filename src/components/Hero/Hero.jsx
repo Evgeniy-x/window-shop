@@ -10,8 +10,6 @@ export const Hero = () => {
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [nameIsValid, setNameIsValid] = useState(false);
-  const [phoneIsValid, setPhoneIsValid] = useState(false);
-  const [isButtonActive, setIsButtonActive] = useState(false);
 
   const handleNameChange = e => {
     setName(e.target.value);
@@ -100,9 +98,7 @@ export const Hero = () => {
                 type="text"
                 value={name}
                 onChange={handleNameChange}
-                className={`${css.form_input} ${
-                  nameIsValid ? css.valid : css.invalid
-                }`}
+                className={css.form_input}
                 placeholder="Введіть ваше ім'я"
                 id="name"
               />
@@ -112,9 +108,7 @@ export const Hero = () => {
                 type="tel"
                 value={phoneNumber}
                 onChange={handlePhoneNumberChange}
-                className={`${css.form_input} ${
-                  nameIsValid ? css.valid : css.invalid
-                }`}
+                className={css.form_input}
                 placeholder="Введіть номер телефону"
                 id="phone"
               />
