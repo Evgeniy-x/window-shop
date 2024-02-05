@@ -1,5 +1,7 @@
 import css from './Hero.module.css';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { telegramSend } from '../../servises/api';
 import quality from '../../assets/images/hero/quality.png';
 import time from '../../assets/images/hero/time.png';
@@ -9,22 +11,13 @@ import delivery from '../../assets/images/hero/delivery.png';
 export const Hero = () => {
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
-  const [nameIsValid, setNameIsValid] = useState(false);
 
   const handleNameChange = e => {
     setName(e.target.value);
-    setNameIsValid(validateName(e.target.value));
-    setIsButtonActive(
-      validateName(e.target.value) && validatePhoneNumber(phoneNumber)
-    );
   };
 
   const handlePhoneNumberChange = e => {
     setPhoneNumber(e.target.value);
-    setPhoneIsValid(validatePhoneNumber(e.target.value));
-    setIsButtonActive(
-      validateName(name) && validatePhoneNumber(e.target.value)
-    );
   };
 
   const validateName = value =>
@@ -38,12 +31,18 @@ export const Hero = () => {
   const handleSubmit = e => {
     e.preventDefault();
     // Тут можна реалізувати логіку для відправлення замовлення зворотного дзвінка
+    if (!validateName(name)) {
+      return toast.error("Введіть коректне ім'я (min 3, letters)");
+    }
+
+    if (!validatePhoneNumber(phoneNumber)) {
+      return toast.error('Введіть коректний номер телефону (min 9, numbers)');
+    }
 
     const text = `Ім'я: ${name}\nТелефон: ${phoneNumber}`;
     telegramSend(text);
     setName('');
     setPhoneNumber('');
-    setIsButtonActive(false);
   };
   return (
     <>
@@ -113,11 +112,7 @@ export const Hero = () => {
                 id="phone"
               />
             </label>
-            <button
-              className={css.form_button}
-              type="submit"
-              disabled={!isButtonActive}
-            >
+            <button className={css.form_button} type="submit">
               ВИКЛИКАТИ ЗАМІРНИКА!
             </button>
             <p className={css.modal_security}>Ваші дані конфіденційні</p>
