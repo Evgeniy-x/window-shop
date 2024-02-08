@@ -32,12 +32,12 @@ export const Hero = () => {
     e.preventDefault();
     // Тут можна реалізувати логіку для відправлення замовлення зворотного дзвінка
     if (!validateName(name)) {
-      return toast.error("Введіть коректне ім'я (min 3, тільки букви)");
+      return toast.error("Введіть коректне ім'я (тільки букви)");
     }
 
     if (!validatePhoneNumber(phoneNumber)) {
       return toast.error(
-        'Введіть коректний номер телефону (min 9, тільки цифри)'
+        'Введіть коректний номер телефону (тільки цифри, мінімум 9 символів)'
       );
     }
 
