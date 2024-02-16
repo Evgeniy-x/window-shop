@@ -11,11 +11,7 @@ const products = {
   'Категорія 2': [
     { id: 3, name: 'Товар 2-1', price: 200 },
     { id: 4, name: 'Товар 2-2', price: 250 },
-  ],
-  'Категорія 3': [
-    { id: 5, name: 'Товар 3-1', price: 300 },
-    { id: 6, name: 'Товар 3-2', price: 350 },
-  ],
+  ]І
 };
 
 const Catalogs = () => {
